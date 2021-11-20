@@ -7,3 +7,11 @@
 body {
     height: 300px;
 }
+tab-panel > button.selected{
+    background: #FF00FF;
+    color: #FFFFFF;
+}
+
+tab-panel > div[data-tabname].hidden {
+    display: none;
+}
