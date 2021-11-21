@@ -1,15 +1,14 @@
 'use strict';
 let current;
-
 let currentBody;
+let tabButton;
+let tabContent = document.querySelectorAll('div');
 
 const switchTab = (event) => {
 
   current.classList.remove('selected');
   current = event.target;
   current.classList.add('selected');
-
-  let tabContent = document.querySelectorAll('div');
   currentBody.classList.toggle('hidden');
 
   switch (current.textContent) {
@@ -31,8 +30,7 @@ const tabs = (node) => {
   let tabLength = node.children.length;
 
   for (let i = 0; i < tabLength; i++) {
-    let tabButton = document.createElement('button');
-
+    tabButton = document.createElement('button');
     tabButton.textContent = document.querySelectorAll('div')[i].getAttribute(
         'data-tabname');
     node.querySelectorAll('div')[i].classList.add('hidden');
